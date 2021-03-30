@@ -22,7 +22,9 @@ class Example(Document):
     Documen = EmbeddedDocumentField(Documen)
     example_name = StringField()
 
-
+    @staticmethod
+    def query_all_example():
+        return Example.objects
     # @staticmethod
     # def verify(username, password):
     #     admin = Admin.objects(admin_username=username).first()

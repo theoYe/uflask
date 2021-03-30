@@ -31,7 +31,7 @@ class DevelopConfig(Config):
     DATABASE = "uflask_db"
     USER = "uflask"
     PASSWORD = "uflask123"
-    HOST = "192.168.163.129"
+    HOST = "192.168.163.137"
     PORT = 27017
     DESCRIPTION = "DevelopConfig"
     AUTHENTICATION_SOURCE = "uflask_db"

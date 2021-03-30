@@ -2,6 +2,7 @@
 # from app.libs.error import Success, NotFound, AlreadyExsitError, DeleteSuccess, UpdateSuccess
 # from app.libs.helper import verify_mongo_id
 from app.libs.redprint import Redprint
+from app.models.example import Example
 # from app.models.admin import Admin
 # from app.libs.token_auth import auth
 # from app.models.doctor import Doctor
@@ -9,11 +10,11 @@ from app.libs.redprint import Redprint
 
 api = Redprint("example")
 
-@api.route("/get_examples", methods=["POST"])
+@api.route("/get_examples", methods=["GET", "POST"])
 # @auth.login_required
-def get_all_doctor():
-    doctors = Doctor.query_all_doctors()
-    return doctors.to_json()
+def get_all_examples():
+    examples = Example.query_all_example()
+    return examples.to_json()
 
 
 # @api.route("/add_doctor", methods=['PUT'])

@@ -15,7 +15,7 @@ def create_app():
     app = Flask(__name__)
 
     # 初始化环境
-    env = "production"     #app.env
+    env = "development"     #app.env
 
     # 载入配置文件
     app.config.from_object(envs[env])

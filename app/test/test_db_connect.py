@@ -7,7 +7,7 @@ import  json
 # 导入配置
 from app.config.setting import DevelopConfig, StagingConfig
 from bson import json_util
-from app.models.Example import Example
+from app.models.example import Example
 
 def test_development():
     app = Flask(__name__)
